@@ -67,9 +67,8 @@ const convertTemperature = (x, y) => {
   if (y === "C") {
     return `${x} ('Celsius')`;
   } else if (y === "F") {
-    const CELSIUS_TO_FAHRENHEIT = 32;
-    const convertCelsius = x * CELSIUS_TO_FAHRENHEIT;
-    return `${convertCelsius} (Fahrenheit)`;
+    const CELSIUS_TO_FAHRENHEIT = (x * 9) / 5 + 32;
+    return `${CELSIUS_TO_FAHRENHEIT} (Fahrenheit)`;
   }
 };
 console.log("Exercise 8 Result:", convertTemperature(32, "C"));
@@ -85,4 +84,4 @@ const basicCalculator = (x, y, z) => {
     return x / y;
   }
 };
-console.log(basicCalculator(10, 5, "divide"));
+console.log(basicCalculator(10, 5, "subtract"));
