@@ -39,15 +39,15 @@ const generateEmail = (x, y) => {
 console.log("Exercise 4 Result:", generateEmail("johnsmith", "example.com"));
 
 const greetUser = (name, timeOfDay) => {
-  const thisTime = new Date().toISOString().split("T")[1];
-  const hour = parseInt(thisTime);
-  if (hour <= 12) {
-    timeOfDay = "morning";
-  } else if (hour <= 18) {
-    timeOfDay = "afternoon";
-  } else {
-    timeOfDay = "evening";
-  }
+  // const thisTime = new Date().toISOString().split("T")[1];
+  // const hour = parseInt(thisTime);
+  // if (hour <= 12) {
+  //   timeOfDay = "morning";
+  // } else if (hour <= 18) {
+  //   timeOfDay = "afternoon";
+  // } else {
+  //   timeOfDay = "evening";
+  // }
   return `Good ${timeOfDay}, ${name}!`;
 };
 console.log("Exercise 5 Result:", greetUser("Sam", "morning"));
@@ -68,7 +68,7 @@ const convertTemperature = (x, y) => {
     return `${x} ('Celsius')`;
   } else if (y === "F") {
     const CELSIUS_TO_FAHRENHEIT = 32;
-    const convertCelsius = x * 32;
+    const convertCelsius = x * CELSIUS_TO_FAHRENHEIT;
     return `${convertCelsius} (Fahrenheit)`;
   }
 };
